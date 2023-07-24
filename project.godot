@@ -13,9 +13,23 @@ config_version=4
 config/name="pizza-jam"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+texture_array={
+"flags/filter": false
+}
 
 [physics]
 
