@@ -14,8 +14,11 @@ func _physics_process(delta):
 		velocity.y += jumpforce
 	elif not is_on_floor():
 		velocity.y += gravity
+		$AnimatedSprite.play("jump")
 	else:
 		velocity.y = 0
+		can_jump = true
+		$AnimatedSprite.play("run")
 	
 	velocity.x = speed
 	
