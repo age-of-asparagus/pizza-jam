@@ -11,10 +11,13 @@ config_version=4
 [application]
 
 config/name="pizza-jam"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
 [display]
 
+window/size/width=512
+window/size/height=300
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
