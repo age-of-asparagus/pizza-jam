@@ -33,7 +33,7 @@ func _physics_process(delta):
 
 func _on_wall_checker_timeout():
 	if is_on_wall():
-		queue_free()
+		position = get_parent().get_node("PlayerStartPosition").position
 
 
 func _on_jump_timer_timeout():
