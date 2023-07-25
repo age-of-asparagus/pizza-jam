@@ -25,13 +25,10 @@ func _physics_process(delta):
 	move_and_slide(velocity, Vector2.UP)
 	
 	
-	if is_on_wall() and not checking_on_wall:
-		checking_on_wall = true
-		$wall_checker.start()
 	
 
 
-func _on_wall_checker_timeout():
+func die():
 	if is_on_wall():
 		position = get_parent().get_node("PlayerStartPosition").position
 
