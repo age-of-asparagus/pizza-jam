@@ -11,28 +11,15 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(is_on_wall())
+	
 	if Input.is_action_pressed("Jump") and is_on_floor():
 		can_jump = false
 		velocity.y += jumpforce
 	elif not is_on_floor():
-		velocity.y += gravity
 		$AnimatedSprite.play("jump")
 	else:
-		velocity.y = 0
-		if not is_on_wall() and not $AnimatedSprite.animation == "run":
-			print(is_on_floor())
-			$AnimatedSprite.play("run")
+		$AnimatedSprite.play("run")
 	
-	
-	move_and_slide(velocity, Vector2.UP)
-	
-	
-
-
-
-
-
-
-func _on_jump_timer_timeout():
-	can_jump = true
+	velocity.y += gravity
+	var new_velocity = move_and_slide(velocity, Vector2.UP)
+	velocity.y = new_velocity.y
