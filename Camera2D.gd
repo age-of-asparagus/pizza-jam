@@ -8,9 +8,6 @@ func _physics_process(delta):
 	global_position.x += camera_move_speed
 	global_position.y = player.global_position.y
 	
-	if player.global_position.y > 400:
-		die()
-	
 func die():
 	global_position = camera_start_position
 	player.global_position = get_parent().get_node("PlayerStartPosition").global_position

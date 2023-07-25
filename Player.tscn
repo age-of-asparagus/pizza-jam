@@ -21,12 +21,12 @@ animations = [ {
 extents = Vector2( 7, 11.5 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "run"
-frame = 1
 playing = true
 flip_h = true
 
