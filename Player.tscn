@@ -25,24 +25,10 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "jump"
+animation = "run"
 playing = true
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-
-[node name="wall_checker" type="Timer" parent="."]
-wait_time = 0.1
-autostart = true
-
-[node name="jump_timer" type="Timer" parent="."]
-wait_time = 0.01
-one_shot = true
-
-[connection signal="timeout" from="wall_checker" to="." method="_on_wall_checker_timeout"]
-[connection signal="timeout" from="jump_timer" to="." method="_on_jump_timer_timeout"]
