@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="pizza-jam"
-run/main_scene="res://Levels/Game.tscn"
+run/main_scene="res://Levels/BaseLevel.tscn"
 config/icon="res://icon.png"
 
 [display]
