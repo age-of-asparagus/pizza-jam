@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Assets/kenney_pixel-platformer/Tilemap/tiles_packed.png" type="Texture" id=1]
 [ext_resource path="res://Assets/kenney_pixel-platformer/Background/background_0002.png" type="Texture" id=2]
@@ -654,6 +654,9 @@ points = PoolVector2Array( 0, 0, 18, 0, 18, 18, 0, 18 )
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 1390, 42.5 )
+
 [node name="Game" type="Node2D"]
 script = ExtResource( 13 )
 
@@ -751,9 +754,17 @@ collision_mask = 0
 stream = ExtResource( 15 )
 volume_db = -20.0
 
+[node name="Water" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
+position = Vector2( 1362, 396 )
+shape = SubResource( 53 )
+
 [connection signal="body_entered" from="Powerups/PowerUp" to="Powerups/PowerUp" method="_on_PowerUp_body_entered"]
 [connection signal="body_entered" from="Powerups/PowerUp3" to="Powerups/PowerUp3" method="_on_PowerUp_body_entered"]
 [connection signal="body_entered" from="Powerups/PowerUp7" to="Powerups/PowerUp7" method="_on_PowerUp_body_entered"]
 [connection signal="body_entered" from="Powerups/PowerUp2" to="Powerups/PowerUp2" method="_on_PowerUp_body_entered"]
 [connection signal="body_entered" from="Powerups/PowerUp4" to="Powerups/PowerUp4" method="_on_PowerUp_body_entered"]
 [connection signal="body_entered" from="Powerups/PowerUp5" to="Powerups/PowerUp5" method="_on_PowerUp_body_entered"]
+[connection signal="body_entered" from="Water" to="." method="_on_Water_body_entered"]

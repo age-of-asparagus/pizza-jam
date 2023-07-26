@@ -25,17 +25,24 @@ func _physics_process(delta):
 	var new_velocity = move_and_slide(velocity, Vector2.UP)
 	velocity.y = new_velocity.y
 	
+func die():
+	reset_stuff()
+	
+func reset_stuff():
+	scale = Vector2(1,1)
+	$AudioJump.pitch_scale = 1.0
 	
 func _on_PowerupDetector_area_entered(area):
 	var multiplier = area.grow_scale
 	area.queue_free()  # Delete the power up
 	$AudioChomp.play()
 	
-	if multiplier == 1:  # reset scale
-		scale = Vector2(1,1)
-		$AudioJump.pitch_scale = 1.0
+	if multiplier == 1:
+		reset_stuff()
 	else:
 		scale *= multiplier
 		$AudioJump.pitch_scale /= multiplier
+		
+
 	
 
