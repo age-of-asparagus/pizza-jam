@@ -17,8 +17,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 7, 11.5 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 8.0
+height = 8.0
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
@@ -31,5 +32,4 @@ playing = true
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -0.5 )
 shape = SubResource( 3 )
