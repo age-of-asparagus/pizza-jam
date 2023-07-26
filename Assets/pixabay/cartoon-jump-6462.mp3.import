@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cartoon-jump-6462.mp3-725c90e901d1a269ac782ee00c70f779.mp3str"
+
+[deps]
+
+source_file="res://Assets/pixabay/cartoon-jump-6462.mp3"
+dest_files=[ "res://.import/cartoon-jump-6462.mp3-725c90e901d1a269ac782ee00c70f779.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

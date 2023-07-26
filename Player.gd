@@ -15,6 +15,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Jump") and is_on_floor():
 		can_jump = false
 		velocity.y += jumpforce
+		$AudioJump.play()
 	elif not is_on_floor():
 		$AnimatedSprite.play("jump")
 	else:
@@ -25,3 +26,16 @@ func _physics_process(delta):
 	velocity.y = new_velocity.y
 	
 	
+func _on_PowerupDetector_area_entered(area):
+	var multiplier = area.grow_scale
+	area.queue_free()  # Delete the power up
+	$AudioChomp.play()
+	
+	if multiplier == 1:  # reset scale
+		scale = Vector2(1,1)
+		$AudioJump.pitch_scale = 1.0
+	else:
+		scale *= multiplier
+		$AudioJump.pitch_scale /= multiplier
+	
+

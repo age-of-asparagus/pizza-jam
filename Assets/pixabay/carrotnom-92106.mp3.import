@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/carrotnom-92106.mp3-a734deeac20720f92dabadc7c1989b18.mp3str"
+
+[deps]
+
+source_file="res://Assets/pixabay/carrotnom-92106.mp3"
+dest_files=[ "res://.import/carrotnom-92106.mp3-a734deeac20720f92dabadc7c1989b18.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

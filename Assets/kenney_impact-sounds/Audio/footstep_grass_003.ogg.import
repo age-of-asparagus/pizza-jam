@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/footstep_grass_003.ogg-b6314042ab3663e5968ca679ea61d28f.oggstr"
+
+[deps]
+
+source_file="res://Assets/kenney_impact-sounds/Audio/footstep_grass_003.ogg"
+dest_files=[ "res://.import/footstep_grass_003.ogg-b6314042ab3663e5968ca679ea61d28f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

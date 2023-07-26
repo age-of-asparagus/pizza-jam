@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/muvibeat7_130bpm-15215.mp3-29a862a4b2b3e7bcfb82b4affcf2c0f3.mp3str"
+
+[deps]
+
+source_file="res://Assets/pixabay/muvibeat7_130bpm-15215.mp3"
+dest_files=[ "res://.import/muvibeat7_130bpm-15215.mp3-29a862a4b2b3e7bcfb82b4affcf2c0f3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

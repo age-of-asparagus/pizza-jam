@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://Assets/kenney_pixel-platformer/Tilemap/tiles_packed.png" type="Texture" id=1]
 [ext_resource path="res://Assets/kenney_pixel-platformer/Background/background_0002.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://PowerUps/Shrinkshroom.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Levels/Game.gd" type="Script" id=13]
 [ext_resource path="res://PowerUps/Growshroom.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/pixabay/muvibeat7_130bpm-15215.mp3" type="AudioStream" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 18, 0, 18, 18, 0, 18 )
@@ -727,14 +728,8 @@ position = Vector2( 376, 154 )
 [node name="PowerUp3" parent="Powerups" instance=ExtResource( 14 )]
 position = Vector2( 585, 153 )
 
-[node name="PowerUp6" parent="Powerups" instance=ExtResource( 14 )]
-position = Vector2( 730, 243 )
-
 [node name="PowerUp7" parent="Powerups" instance=ExtResource( 14 )]
-position = Vector2( 840, 233 )
-
-[node name="PowerUp8" parent="Powerups" instance=ExtResource( 14 )]
-position = Vector2( 876, 232 )
+position = Vector2( 880, 245 )
 
 [node name="PowerUp2" parent="Powerups" instance=ExtResource( 12 )]
 position = Vector2( 376, 243 )
@@ -751,3 +746,14 @@ position = Vector2( 242, 154 )
 [node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 163, 52 )
 collision_mask = 0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -20.0
+
+[connection signal="body_entered" from="Powerups/PowerUp" to="Powerups/PowerUp" method="_on_PowerUp_body_entered"]
+[connection signal="body_entered" from="Powerups/PowerUp3" to="Powerups/PowerUp3" method="_on_PowerUp_body_entered"]
+[connection signal="body_entered" from="Powerups/PowerUp7" to="Powerups/PowerUp7" method="_on_PowerUp_body_entered"]
+[connection signal="body_entered" from="Powerups/PowerUp2" to="Powerups/PowerUp2" method="_on_PowerUp_body_entered"]
+[connection signal="body_entered" from="Powerups/PowerUp4" to="Powerups/PowerUp4" method="_on_PowerUp_body_entered"]
+[connection signal="body_entered" from="Powerups/PowerUp5" to="Powerups/PowerUp5" method="_on_PowerUp_body_entered"]

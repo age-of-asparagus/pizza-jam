@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wah-wah-sad-trombone-6347.mp3-f9c18d5de648e971ad9a6f420776ee04.mp3str"
+
+[deps]
+
+source_file="res://Assets/pixabay/wah-wah-sad-trombone-6347.mp3"
+dest_files=[ "res://.import/wah-wah-sad-trombone-6347.mp3-f9c18d5de648e971ad9a6f420776ee04.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

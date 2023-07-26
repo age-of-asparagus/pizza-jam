@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready():
+	$BackgroundMusic.play()
 
 func _physics_process(delta):
 	pass
